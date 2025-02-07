@@ -1,56 +1,60 @@
-Description
+Smart Utility Management is a full-stack application designed to efficiently track and manage utility consumption, including electricity, water, and gas. The system provides real-time analytics, bill generation, and notification alerts to help users optimize their usage and reduce costs.
 
-The Smart Utility Management App is a full-stack web application designed to help users monitor, analyze, and optimize utility usage. Built with Next.js, React, and Prisma, it provides a user-friendly interface for tracking electricity, water, and gas consumption, visualizing usage patterns, and managing utility bills.
+Tech Stack
 
-Key Features:
+Frontend
+HTML, CSS, JavaScript – For building the UI
+Bootstrap – For responsive design
 
-- User authentication and personalized dashboards
-- Real-time utility usage tracking and visualization
-- Bill management and payment integration
-- Usage alerts and notifications
-- Responsive design for mobile and desktop
+Backend
+Python (Flask/Django) – For handling API requests and business logic
+Flask RESTful API – For building REST APIs
+Jinja2 – For template rendering (if Flask is used for UI)
 
-This project showcases proficiency in modern web development technologies, including:
+Database
+MySQL/PostgreSQL – For storing user data, utility usage, and billing details
+SQLAlchemy – ORM for database interactions
 
-- Frontend development with React and Next.js
-- Backend API routes with Next.js
-- Database management with Prisma
-- Authentication with NextAuth.js
-- Responsive design with Tailwind CSS
-- Data visualization with Recharts
-- Deployment on Vercel
+Authentication & Security
+JWT (JSON Web Tokens) – For secure authentication
+Flask-Login / OAuth – User authentication & session management
+Argon2/Bcrypt – Password hashing for enhanced security
 
-Table of Contents
+Other Tools & Libraries
+Pandas, NumPy – For data analysis and processing
+Matplotlib, Seaborn – For visualizing consumption trends
+Celery + Redis – For scheduling background tasks (like bill reminders)
+Flask-Mail / Twilio API – For email and SMS notifications
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [Technologies](#technologies)
-- [Contributing](#contributing)
-- [License](#license)
+Features
+User Authentication: Secure login/logout functionality
+Utility Consumption Tracking: Monitor electricity, water, and gas usage
+Automated Bill Calculation: Generate utility bills based on consumption patterns
+Real-Time Data Analytics: Graphs and reports for consumption trends
+Alerts & Notifications: Get notified about abnormal usage or due bills
+Admin Dashboard: Manage users, services, and billing settings
 
-Installation
+Installation Guide
+1. Clone the Repository
+git clone https://github.com/geekdivyxnsh/smart-utility-management.git
+cd smart-utility-management
 
-To set up the project locally, follow these steps:
+2. Set Up Virtual Environment (Optional but Recommended)
+python -m venv venv
+source venv/bin/activate  
+venv\Scripts\activate     
 
-1. Clone the repository: git clone <repository-url>
-2. Navigate to the project directory:cd smart-utility-management-app
-3. Install dependencies:npm install
-4. Set up environment variables by creating a `.env` file based on the `.env.example` provided.
-5. Run the development server:npm run dev
+3. Install Dependencies
+pip install -r requirements.txt
 
-##Usage
+4. Configure Database
+Update config.py with your MySQL/PostgreSQL database credentials.
+Initialize the database:
+python db_setup.py
 
-Access the app via `http://localhost:3000` in your web browser. Sign up or log in to start tracking your utility usage.
+5. Run the Application
+python app.py
+Open http://localhost:5000 in your browser to access the application.
 
-Technologies
 
-- Next.js
-- React
-- Prisma
-- NextAuth.js
-- Tailwind CSS
-- Recharts
 
-Contributing
-
-Contributions are welcome! Please submit a pull request or open an issue for any enhancements or bug fixes.
